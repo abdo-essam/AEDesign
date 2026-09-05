@@ -12,26 +12,26 @@ plugins {
 
 // ---------------------------------------------------------------------------
 // API Reference generation: reads KDocs from component sources and writes
-// AEDESIGNSYSTEM_REFERENCE.md for AI agents and developers.
+// AEDESIGN_REFERENCE.md for AI agents and developers.
 // ---------------------------------------------------------------------------
 val generateApiReference by tasks.registering(GenerateApiReferenceTask::class) {
     componentsUiDir.set(
         layout.projectDirectory.dir(
-            "../../components/src/commonMain/kotlin/com/ae/designsystem/components/ui",
+            "../../components/src/commonMain/kotlin/com/ae/design/components/ui",
         ),
     )
     foundationDir.set(
         layout.projectDirectory.dir(
-            "../../foundation/src/commonMain/kotlin/com/ae/designsystem/foundation",
+            "../../foundation/src/commonMain/kotlin/com/ae/design/foundation",
         ),
     )
     registrySourceFile.set(
         layout.projectDirectory.file(
-            "src/commonMain/kotlin/com/ae/designsystem/sample/docs/catalog/ComponentRegistry.kt",
+            "src/commonMain/kotlin/com/ae/design/sample/docs/catalog/ComponentRegistry.kt",
         ),
     )
     outputFile.set(
-        layout.projectDirectory.file("../../AEDESIGNSYSTEM_REFERENCE.md"),
+        layout.projectDirectory.file("../../AEDESIGN_REFERENCE.md"),
     )
 }
 
@@ -42,12 +42,12 @@ val generateApiReference by tasks.registering(GenerateApiReferenceTask::class) {
 val generateRegistryJson by tasks.registering(GenerateRegistryJsonTask::class) {
     componentsUiDir.set(
         layout.projectDirectory.dir(
-            "../../components/src/commonMain/kotlin/com/ae/designsystem/components/ui",
+            "../../components/src/commonMain/kotlin/com/ae/design/components/ui",
         ),
     )
     registrySourceFile.set(
         layout.projectDirectory.file(
-            "src/commonMain/kotlin/com/ae/designsystem/sample/docs/catalog/ComponentRegistry.kt",
+            "src/commonMain/kotlin/com/ae/design/sample/docs/catalog/ComponentRegistry.kt",
         ),
     )
     outputDir.set(
@@ -69,7 +69,7 @@ tasks.matching { it.name == "wasmJsProcessResources" }.configureEach {
 val generateComponentSources by tasks.registering(GenerateComponentSourcesTask::class) {
     componentsUiDir.set(
         layout.projectDirectory.dir(
-            "../../components/src/commonMain/kotlin/com/ae/designsystem/components/ui",
+            "../../components/src/commonMain/kotlin/com/ae/design/components/ui",
         ),
     )
     outputDir.set(
@@ -82,10 +82,10 @@ val generateComponentSources by tasks.registering(GenerateComponentSourcesTask::
 
 
 android {
-    namespace = "com.ae.designsystem.sample"
+    namespace = "com.ae.design.sample"
     compileSdk = 37
     defaultConfig {
-        applicationId = "com.ae.designsystem.sample"
+        applicationId = "com.ae.design.sample"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -147,10 +147,10 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "com.ae.designsystem.sample.MainKt"
+        mainClass = "com.ae.design.sample.MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "AEDesignSystem Catalog"
+            packageName = "AEDesign Catalog"
             packageVersion = "1.0.0"
         }
     }

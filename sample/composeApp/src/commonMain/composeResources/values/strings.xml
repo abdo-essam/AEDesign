@@ -63,7 +63,7 @@
     <string name="whats_new_docs_item_tabs">Tabbed layout — all component doc pages refactored to tabs with Do&#39;s &amp; Don&#39;ts sections</string>
     <string name="whats_new_docs_item_preview">Theme preview overrides — live theme switching within component documentation</string>
     <string name="whats_new_docs_item_search">Sidebar search — filter documentation pages by name</string>
-    <string name="whats_new_docs_item_why">\"Why AEDesignSystem\" manifesto — new page explaining the project&#39;s positioning</string>
+    <string name="whats_new_docs_item_why">\"Why AEDesign\" manifesto — new page explaining the project&#39;s positioning</string>
 
     <string name="whats_new_section_examples">Example Cards Polish</string>
     <string name="whats_new_examples_body">Both home and creator page examples have been reworked:</string>
@@ -192,10 +192,10 @@
     <!-- ─── Introduction Page ────────────────────────────────── -->
     <string name="intro_title">Introduction</string>
     <string name="intro_desc">A shadcn/ui-inspired component library and design system for Compose Multiplatform.</string>
-    <string name="intro_section_what_is">What is AEDesignSystem?</string>
-    <string name="intro_what_is_body">AEDesignSystem provides beautifully styled, copy-paste components for Jetpack Compose and Compose Multiplatform. Built entirely on compose.foundation with zero Material3 dependency.</string>
+    <string name="intro_section_what_is">What is AEDesign?</string>
+    <string name="intro_what_is_body">AEDesign provides beautifully styled, copy-paste components for Jetpack Compose and Compose Multiplatform. Built entirely on compose.foundation with zero Material3 dependency.</string>
     <string name="intro_name_meaning">The name means snowflake or composing elements into harmony.</string>
-    <string name="intro_section_why">Why AEDesignSystem?</string>
+    <string name="intro_section_why">Why AEDesign?</string>
     <string name="intro_feature_no_material_title">No Material3 Lock-in</string>
     <string name="intro_feature_no_material_desc">Every component is built on compose.foundation only. You get full control over styling without fighting Material3 defaults.</string>
     <string name="intro_feature_copy_paste_title">Copy-Paste Ownership</string>
@@ -211,7 +211,7 @@
     <string name="intro_badge_ios">iOS</string>
     <string name="intro_badge_desktop">Desktop (JVM)</string>
     <string name="intro_badge_web">Web (Wasm)</string>
-    <string name="intro_platform_body">AEDesignSystem works in both Compose Multiplatform (KMP) projects and native Android projects that use Jetpack Compose. No KMP setup required for Android-only projects \u2014 just add the dependency and go.</string>
+    <string name="intro_platform_body">AEDesign works in both Compose Multiplatform (KMP) projects and native Android projects that use Jetpack Compose. No KMP setup required for Android-only projects \u2014 just add the dependency and go.</string>
     <string name="intro_section_component_count">Component Count</string>
     <string name="intro_stat_total_components">Total Components</string>
     <string name="intro_stat_total_components_value">42</string>
@@ -227,19 +227,19 @@
 
     <!-- ─── Installation Page ────────────────────────────────── -->
     <string name="install_title">Installation</string>
-    <string name="install_desc">Add AEDesignSystem to your Compose Multiplatform or native Android project.</string>
+    <string name="install_desc">Add AEDesign to your Compose Multiplatform or native Android project.</string>
     <string name="install_section_modules">Modules</string>
-    <string name="install_modules_body">AEDesignSystem is split into two modules. You only need to depend on :components \u2014 it transitively includes :foundation.</string>
+    <string name="install_modules_body">AEDesign is split into two modules. You only need to depend on :components \u2014 it transitively includes :foundation.</string>
     <string name="install_module_foundation_desc">Colors, typography, spacing, shapes, motion tokens. AETheme provider.</string>
     <string name="install_module_components_desc">41 styled components built on compose.foundation. Depends on :foundation.</string>
     <string name="install_section_kmp">Compose Multiplatform (KMP)</string>
     <string name="install_kmp_body">For KMP projects targeting Android, iOS, Desktop, and/or Web:</string>
     <string name="install_kmp_note">The KMP Gradle plugin automatically resolves the correct platform artifact for each target (Android, iOS, JVM, WasmJs).</string>
     <string name="install_section_android">Native Android (Jetpack Compose)</string>
-    <string name="install_android_body">AEDesignSystem works in standard Android projects that use Jetpack Compose. No KMP setup required \u2014 Gradle resolves the Android artifact automatically.</string>
+    <string name="install_android_body">AEDesign works in standard Android projects that use Jetpack Compose. No KMP setup required \u2014 Gradle resolves the Android artifact automatically.</string>
     <string name="install_android_note">The API is identical across all platforms. Components, theme tokens, and animations work the same way whether you\u2019re targeting Android only or going multiplatform.</string>
     <string name="install_section_copy_paste">Copy-Paste (No Dependency)</string>
-    <string name="install_copy_paste_body">Like shadcn/ui, you can also copy component source files directly into your project. Each component is self-contained and depends only on compose.foundation and the AEDesignSystem theme tokens.</string>
+    <string name="install_copy_paste_body">Like shadcn/ui, you can also copy component source files directly into your project. Each component is self-contained and depends only on compose.foundation and the AEDesign theme tokens.</string>
     <string name="install_step_1">Copy the theme files from :foundation into your project.</string>
     <string name="install_step_2">Copy the component files you need from :components.</string>
     <string name="install_step_3">Update package names to match your project structure.</string>
@@ -247,14 +247,14 @@
     <string name="install_section_requirements">Requirements</string>
     <string name="install_req_kotlin_desc">Required for Compose Compiler plugin.</string>
     <string name="install_req_compose_desc">Compose Multiplatform or Jetpack Compose.</string>
-    <string name="install_req_material3_desc">AEDesignSystem has zero Material3 dependency. Uses compose.foundation only.</string>
+    <string name="install_req_material3_desc">AEDesign has zero Material3 dependency. Uses compose.foundation only.</string>
     <string name="install_req_minsdk_desc">Android minimum SDK version.</string>
     <string name="install_section_verify">Verify Installation</string>
     <string name="install_verify_body">After adding the dependency, verify it works with a minimal example:</string>
 
     <!-- ─── Theming Page ─────────────────────────────────────── -->
     <string name="theming_title">Theming</string>
-    <string name="theming_desc">Customize every aspect of AEDesignSystem with palettes, accents, style presets, and individual token overrides.</string>
+    <string name="theming_desc">Customize every aspect of AEDesign with palettes, accents, style presets, and individual token overrides.</string>
     <string name="theming_section_quick_start">Quick Start</string>
     <string name="theming_quick_start_body">Wrap your app in AETheme. One function call gives you colors, typography, spacing, shapes, and motion tokens for all components.</string>
     <string name="theming_section_color_palettes">Color Palettes</string>
@@ -596,7 +596,7 @@
 
     <!-- ─── Hover Card Page ──────────────────────────────────── -->
     <string name="hover_card_page_desc">A floating card that appears when hovering over a trigger element. Stays visible while the cursor is on the trigger or card.</string>
-    <string name="hover_card_demo_aedesignsystem">AEDesignSystem</string>
+    <string name="hover_card_demo_aedesign">AEDesign</string>
     <string name="hover_card_demo_desc">A shadcn-inspired component library for Compose Multiplatform.</string>
     <string name="hover_card_demo_hover_me">Hover me (%1$s)</string>
     <string name="hover_card_demo_card_at">Card at %1$s</string>
@@ -1088,27 +1088,27 @@
     <string name="source_tab_code">Code</string>
     <!-- ─── CLI Doc Page ──────────────────────────────────────── -->
     <string name="cli_title">CLI</string>
-    <string name="cli_desc">Add components to your project from the command line. The AEDesignSystem CLI fetches components from the registry, rewrites package imports, and resolves dependencies automatically.</string>
+    <string name="cli_desc">Add components to your project from the command line. The AEDesign CLI fetches components from the registry, rewrites package imports, and resolves dependencies automatically.</string>
     <string name="cli_section_install">Install</string>
     <string name="cli_install_body">Download and install the CLI with a single command. Requires Java 17+.</string>
-    <string name="cli_install_manual">Or download the JAR manually from GitHub Releases and run it with java -jar aedesignsystem.jar.</string>
-    <string name="cli_section_init">aedesignsystem init</string>
+    <string name="cli_install_manual">Or download the JAR manually from GitHub Releases and run it with java -jar aedesign.jar.</string>
+    <string name="cli_section_init">aedesign init</string>
     <string name="cli_init_body">Initialize a configuration file in your project. The CLI detects whether you have a KMP or Android project and suggests defaults.</string>
-    <string name="cli_init_creates">Creates a aedesignsystem.json file with your package name, components directory, and registry URL.</string>
-    <string name="cli_section_add">aedesignsystem add</string>
+    <string name="cli_init_creates">Creates a aedesign.json file with your package name, components directory, and registry URL.</string>
+    <string name="cli_section_add">aedesign add</string>
     <string name="cli_add_body">Add one or more components to your project. Dependencies are resolved automatically.</string>
     <string name="cli_add_deps">When you add a component that depends on others (e.g. Button depends on Icon, Spinner, Text), all dependencies are fetched and installed automatically.</string>
     <string name="cli_add_flags_title">Flags</string>
-    <string name="cli_section_list">aedesignsystem list</string>
+    <string name="cli_section_list">aedesign list</string>
     <string name="cli_list_body">List all available components in the registry, grouped by category with dependency info.</string>
     <string name="cli_section_config">Configuration</string>
-    <string name="cli_config_body">The aedesignsystem.json file stores your project defaults. You can create it with aedesignsystem init or let the CLI prompt you on first use.</string>
+    <string name="cli_config_body">The aedesign.json file stores your project defaults. You can create it with aedesign init or let the CLI prompt you on first use.</string>
     <string name="cli_section_how">How It Works</string>
-    <string name="cli_how_step_1">Fetches component source from the registry at aedesignsystem.com/r/{name}.json</string>
+    <string name="cli_how_step_1">Fetches component source from the registry at abdo-essam.github.io/AEDesign/r/{name}.json</string>
     <string name="cli_how_step_2">Resolves all transitive dependencies (e.g. Button pulls Icon, Spinner, Text)</string>
     <string name="cli_how_step_3">Rewrites package and import lines from the library namespace to your target package</string>
     <string name="cli_how_step_4">Writes .kt files into your components directory, organized by subfolder</string>
-    <string name="cli_how_note">Foundation imports (theme tokens, colors, typography) are left untouched. You still need com.ae.designsystem:foundation as a Gradle dependency.</string>
+    <string name="cli_how_note">Foundation imports (theme tokens, colors, typography) are left untouched. You still need com.ae.design:foundation as a Gradle dependency.</string>
 
     <string name="source_copy_button">Copy Code</string>
     <string name="source_copied">Copied!</string>

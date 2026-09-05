@@ -8,7 +8,7 @@ import org.gradle.api.tasks.TaskAction
 import java.io.File
 
 /**
- * Generates AEDESIGNSYSTEM_REFERENCE.md from KDocs in component source files.
+ * Generates AEDESIGN_REFERENCE.md from KDocs in component source files.
  *
  * Parses every public @Composable function, extracts its KDoc and parameter
  * signature, and writes a flat Markdown API reference that AI agents and
@@ -326,7 +326,7 @@ abstract class GenerateApiReferenceTask : DefaultTask() {
         val uiDir = componentsUiDir.get().asFile
         val out = StringBuilder()
 
-        out.appendLine("# AEDesignSystem API Reference")
+        out.appendLine("# AEDesign API Reference")
         out.appendLine()
         out.appendLine("> Auto-generated from source KDocs. Do not edit manually.")
         out.appendLine("> Run `./gradlew generateApiReference` to regenerate.")

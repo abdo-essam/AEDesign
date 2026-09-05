@@ -13,7 +13,7 @@ kotlin {
     explicitApi()
 
     android {
-        namespace = "com.ae.designsystem.foundation"
+        namespace = "com.ae.design.foundation"
         compileSdk = 37
         minSdk = 24
     }
@@ -57,7 +57,7 @@ signing {
 
 mavenPublishing {
     pom {
-        name = "AEDesignSystem Foundation"
+        name = "AEDesign Foundation"
         description = "Token-driven theme system and design foundation for Compose Multiplatform — zero Material3"
     }
 }

@@ -13,7 +13,7 @@ kotlin {
     explicitApi()
 
     android {
-        namespace = "com.ae.designsystem.components"
+        namespace = "com.ae.design.components"
         compileSdk = 37
         minSdk = 24
     }
@@ -58,7 +58,7 @@ signing {
 
 mavenPublishing {
     pom {
-        name = "AEDesignSystem Components"
+        name = "AEDesign Components"
         description = "Slot-based UI components for Compose Multiplatform — foundation-only, zero Material3"
     }
 }

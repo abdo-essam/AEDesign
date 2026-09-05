@@ -82,7 +82,7 @@ abstract class GenerateRegistryJsonTask : DefaultTask() {
      * Returns a set of directory names that this component depends on.
      */
     private fun detectDependencies(dir: File, ownDirName: String): Set<String> {
-        val importPattern = Regex("""import com\.ae\.designsystem\.components\.ui\.(\w+)\.""")
+        val importPattern = Regex("""import com\.ae\.design\.components\.ui\.(\w+)\.""")
         val deps = mutableSetOf<String>()
 
         dir.listFiles()
@@ -164,7 +164,7 @@ abstract class GenerateRegistryJsonTask : DefaultTask() {
 $depsJson
   ],
   "gradleDependencies": [
-    "com.ae.designsystem:foundation:$version"
+    "com.ae.design:foundation:$version"
   ],
   "files": [
 $filesJson
@@ -236,7 +236,7 @@ $filesMetaJson
 $depsJson
   ],
   "gradleDependencies": [
-    "com.ae.designsystem:foundation:$version"
+    "com.ae.design:foundation:$version"
   ],
   "files": [
 $filesJson
@@ -266,7 +266,7 @@ $filesJson
   "version": "$version",
   "registryDependencies": [],
   "gradleDependencies": [
-    "com.ae.designsystem:foundation:$version"
+    "com.ae.design:foundation:$version"
   ],
   "files": [
     {
@@ -283,14 +283,14 @@ $filesJson
 
         // Write index.json
         val indexJson = """{
-  "name": "aedesignsystem",
-  "homepage": "https://aedesignsystem.com",
+  "name": "aedesign",
+  "homepage": "https://abdo-essam.github.io/AEDesign",
   "version": "$version",
   "items": [
 ${indexEntries.joinToString(",\n")}
   ]
 }
-"""
+        """.trimIndent()
         rDir.resolve("index.json").writeText(indexJson)
     }
 }
