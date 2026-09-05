@@ -1,10 +1,10 @@
 <div align="center">
 <br/>
-<img src="https://img.shields.io/badge/AE-DesignSystem-white?style=for-the-badge&labelColor=18181b&color=fafafa" height="40"/>
+<img src="https://img.shields.io/badge/AE-Design-white?style=for-the-badge&labelColor=18181b&color=fafafa" height="40"/>
 <br/>
 <br/>
 
-# AEDesignSystem
+# AEDesign
 
 **A zero-Material3, token-driven design system for Compose Multiplatform.**
 
@@ -18,7 +18,7 @@
   <img alt="No Material3" src="https://img.shields.io/badge/No%20Material3-Foundation%20Only-18181b?style=for-the-badge"/>
 </p>
 <p>
-  <img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.abdo-essam/ae-foundation?style=for-the-badge&logo=apachemaven&logoColor=white&label=Maven%20Central&color=a503fc"/>
+  <img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.abdo-essam/aedesign-foundation?style=for-the-badge&logo=apachemaven&logoColor=white&label=Maven%20Central&color=a503fc"/>
   <img alt="License" src="https://img.shields.io/badge/license-Apache%202.0-blue?style=for-the-badge"/>
 </p>
 
@@ -31,7 +31,7 @@
 
 Every Compose Multiplatform developer faces a compromise: fight Material3's rigid design guidelines, or build every component from scratch. 
 
-**AEDesignSystem** is the solution:
+**AEDesign** is the solution:
 - **Zero Material3** — Built entirely on `compose.foundation`, `compose.ui`, and `compose.animation`.
 - **Token-driven Design** — Every spacing, color, radius, elevation, and motion value is a strictly typed token.
 - **Slot-based API** — Composables use trailing lambdas for custom inner content, offering full layout flexibility.
@@ -50,8 +50,8 @@ Add the foundation and component libraries to your `commonMain` dependencies:
 ```kotlin
 // build.gradle.kts
 dependencies {
-    implementation("io.github.abdo-essam:ae-foundation:0.1.0") // Token system and core engine
-    implementation("io.github.abdo-essam:ae-components:0.1.0") // Full component catalog
+    implementation("io.github.abdo-essam:aedesign-foundation:0.1.0") // Token system and core engine
+    implementation("io.github.abdo-essam:aedesign-components:0.1.0") // Full component catalog
 }
 ```
 
@@ -108,7 +108,7 @@ AECard(
 ## Theme System
 
 ### Palettes
-AEDesignSystem features 4 neutral base palettes, each supplying complete Light and Dark variants:
+AEDesign features 4 neutral base palettes, each supplying complete Light and Dark variants:
 
 | Palette | Visual Character |
 |:---|:---|

@@ -1,4 +1,4 @@
-rootProject.name = "AEDesignSystem"
+rootProject.name = "AEDesign"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

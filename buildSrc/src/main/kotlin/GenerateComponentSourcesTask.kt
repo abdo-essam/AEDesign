@@ -22,7 +22,7 @@ abstract class GenerateComponentSourcesTask : DefaultTask() {
             ?: emptyList()
 
         val sb = StringBuilder()
-        sb.appendLine("package com.ae.designsystem.sample.docs.sources")
+        sb.appendLine("package com.ae.design.sample.docs.sources")
         sb.appendLine()
         sb.appendLine("import kotlin.io.encoding.Base64")
         sb.appendLine("import kotlin.io.encoding.ExperimentalEncodingApi")
@@ -55,7 +55,7 @@ abstract class GenerateComponentSourcesTask : DefaultTask() {
         sb.appendLine("}")
 
         val outFile = outputDir.get().asFile.resolve(
-            "com/ae/designsystem/sample/docs/sources/ComponentSources.kt",
+            "com/ae/design/sample/docs/sources/ComponentSources.kt",
         )
         outFile.parentFile.mkdirs()
         outFile.writeText(sb.toString())
