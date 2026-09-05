@@ -1,6 +1,7 @@
 package com.ae.design.sample.navigation
 
 import kotlinx.browser.window
+import kotlin.js.ExperimentalWasmJsInterop
 
 actual fun resolveInitialRoute(): AppNavGraph {
     val hash = window.location.hash
@@ -36,6 +37,7 @@ actual fun resolveInitialRoute(): AppNavGraph {
     }
 }
 
+@OptIn(ExperimentalWasmJsInterop::class)
 actual fun updateDocsHash(pageId: String) {
     val guidePageIds = com.ae.design.sample.docs.catalog.guidePageIds
     val path = if (pageId in guidePageIds) {

@@ -42,6 +42,7 @@ import com.ae.design.foundation.icons.AEIcon
 import com.ae.design.foundation.icons.AEIcons
 import com.ae.design.foundation.theme.AETheme
 import com.ae.design.sample.app.LocalAppState
+import kotlin.time.Duration.Companion.milliseconds
 
 // ─── Preview Theme Local ────────────────────────────────────
 
@@ -240,7 +241,7 @@ fun CodeBlock(
 
     LaunchedEffect(showCopied) {
         if (showCopied) {
-            delay(1500L)
+            delay(1500L.milliseconds)
             showCopied = false
         }
     }

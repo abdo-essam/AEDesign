@@ -33,6 +33,7 @@ import com.ae.design.components.ui.button.AEButtonVariant
 import com.ae.design.components.ui.text.AEText
 import com.ae.design.foundation.theme.AETheme
 import androidx.compose.foundation.shape.RoundedCornerShape
+import kotlin.time.Duration.Companion.milliseconds
 
 @Composable
 fun SourceCodeViewer(componentId: String) {
@@ -145,7 +146,7 @@ private fun SourceFileBlock(
                     clipboardManager.setText(AnnotatedString(content))
                     copied = true
                     scope.launch {
-                        delay(2000)
+                        delay(2000.milliseconds)
                         copied = false
                     }
                 },
