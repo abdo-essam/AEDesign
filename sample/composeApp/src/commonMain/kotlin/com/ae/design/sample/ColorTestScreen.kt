@@ -464,7 +464,7 @@ private fun PaletteChip(
                 .border(1.dp, Color.White.copy(alpha = 0.5f), CircleShape),
         )
         Text(
-            text = if (isSelected) "✓ ${option.name}" else option.name,
+            text = if (isSelected) "V ${option.name}" else option.name,
             fontSize = 12.sp,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
             color = if (isSelected) activeColor else colors.shadePrimary,
@@ -527,7 +527,7 @@ private fun NavigationAndSearch(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "🔍",
+                    text = "S",
                     fontSize = 14.sp,
                     modifier = Modifier.padding(end = 8.dp),
                 )
@@ -554,7 +554,7 @@ private fun NavigationAndSearch(
                 )
                 if (searchQuery.isNotEmpty()) {
                     Text(
-                        text = "✕",
+                        text = "X",
                         fontSize = 13.sp,
                         color = colors.shadeSecondary,
                         modifier = Modifier
@@ -937,7 +937,7 @@ private fun PaletteRowCard(
                         .padding(horizontal = 8.dp, vertical = 4.dp),
                 ) {
                     Text(
-                        text = if (isPrimary) "✓ Primary" else "Set Primary",
+                        text = if (isPrimary) "V Primary" else "Set Primary",
                         fontSize = 11.sp,
                         fontWeight = if (isPrimary) FontWeight.Bold else FontWeight.Medium,
                         color = if (isPrimary) colors.primary else colors.shadeSecondary,
@@ -958,7 +958,7 @@ private fun PaletteRowCard(
                         .padding(horizontal = 8.dp, vertical = 4.dp),
                 ) {
                     Text(
-                        text = if (isSecondary) "✓ Secondary" else "Set Secondary",
+                        text = if (isSecondary) "V Secondary" else "Set Secondary",
                         fontSize = 11.sp,
                         fontWeight = if (isSecondary) FontWeight.Bold else FontWeight.Medium,
                         color = if (isSecondary) colors.secondary else colors.shadeSecondary,
@@ -1214,7 +1214,7 @@ private fun ComponentsPreviewView(
                     AlertBanner(
                         title = "Success Alert",
                         message = "Your action completed successfully.",
-                        icon = "✓",
+                        icon = "V",
                         containerColor = colors.successVariant,
                         borderColor = colors.success,
                         contentColor = colors.onSuccess,
@@ -1222,7 +1222,7 @@ private fun ComponentsPreviewView(
                     AlertBanner(
                         title = "Warning Notice",
                         message = "This operation requires authentication verification.",
-                        icon = "⚠",
+                        icon = "!",
                         containerColor = colors.warningVariant,
                         borderColor = colors.warning,
                         contentColor = colors.onWarning,
@@ -1230,7 +1230,7 @@ private fun ComponentsPreviewView(
                     AlertBanner(
                         title = "Error Destructive",
                         message = "Failed to connect to backend server.",
-                        icon = "✕",
+                        icon = "X",
                         containerColor = colors.errorVariant,
                         borderColor = colors.error,
                         contentColor = colors.onError,
@@ -1238,7 +1238,7 @@ private fun ComponentsPreviewView(
                     AlertBanner(
                         title = "Info Message",
                         message = "System update scheduled tonight at 02:00 UTC.",
-                        icon = "ℹ",
+                        icon = "i",
                         containerColor = colors.infoVariant,
                         borderColor = colors.info,
                         contentColor = colors.onInfo,
