@@ -36,7 +36,7 @@ fun main() = application {
             LocalHostDefaultProvider provides hostDefaultProvider,
             LocalViewModelStoreOwner provides viewModelStoreOwner,
         ) {
-            SiteApp()
+            ColorTestApp()
         }
     }
 }

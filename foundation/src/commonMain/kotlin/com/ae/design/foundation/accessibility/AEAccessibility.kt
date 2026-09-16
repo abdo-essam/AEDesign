@@ -18,8 +18,7 @@ import androidx.compose.ui.unit.dp
 /**
  * Draws a visible focus ring around a component when focused.
  *
- * Uses the theme's `ring` color token by default. Applied as a
- * draw-behind modifier so it doesn't affect layout.
+ * Applied as a draw-behind modifier so it doesn't affect layout.
  *
  * @param focused Whether the component is currently focused.
  * @param color Focus ring color.

@@ -77,3 +77,6 @@ Mobile Engineering Standards.md
 composeApp/src/wasmJsMain/resources/r/
 
 buildSrc/.gradle/
+
+# Bookmarks / Internal tools
+bm/

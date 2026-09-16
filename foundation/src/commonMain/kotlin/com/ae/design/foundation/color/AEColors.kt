@@ -3,69 +3,46 @@ package com.ae.design.foundation.color
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
 
-/**
- * Semantic color roles for the AEDesign.
- *
- * Colors are never referenced by raw hex in components — only through
- * these semantic roles. This enables full theme swapping (light/dark,
- * brand) without touching component code.
- */
 @Immutable
 public data class AEColors(
-    // ── Backgrounds ──
-    /** Primary page/screen background */
-    val background: Color,
-    /** Secondary background for layered surfaces */
-    val backgroundSecondary: Color,
-    /** Card/surface background */
-    val surface: Color,
-    /** Surface color on hover */
-    val surfaceHover: Color,
+    public val primary: Color,
+    public val primaryVariant: Color,
+    public val onPrimary: Color,
 
-    // ── Text / Content ──
-    /** Primary text color */
-    val textPrimary: Color,
-    /** Secondary / supporting text */
-    val textSecondary: Color,
-    /** Muted / placeholder text */
-    val textMuted: Color,
-    /** Text rendered on top of accent surfaces */
-    val textOnAccent: Color,
+    public val secondary: Color,
+    public val secondaryVariant: Color,
+    public val onSecondary: Color,
 
-    // ── Accent / Brand ──
-    /** Primary accent color (buttons, links, active states) */
-    val accent: Color,
-    /** Accent on hover / pressed */
-    val accentHover: Color,
-    /** Muted accent for subtle backgrounds */
-    val accentMuted: Color,
+    public val background: Color,
+    public val onBackground: Color,
+    public val container: Color,
+    public val containerVariant: Color,
+    public val onContainer: Color,
 
-    // ── Semantic Status ──
-    /** Destructive actions (delete, error) */
-    val destructive: Color,
-    /** Text on destructive surfaces */
-    val destructiveText: Color,
-    /** Success indicator */
-    val success: Color,
-    /** Warning indicator */
-    val warning: Color,
-    /** Informational indicator */
-    val info: Color,
+    public val shadePrimary: Color,
+    public val shadeSecondary: Color,
+    public val shadeTertiary: Color,
+    public val shadeQuaternary: Color,
 
-    // ── Borders & Dividers ──
-    /** Default border */
-    val border: Color,
-    /** Focused input border */
-    val borderFocused: Color,
-    /** Focus ring around interactive elements */
-    val ring: Color,
+    public val disable: Color,
+    public val onDisable: Color,
 
-    // ── Input ──
-    /** Input field background */
-    val inputBackground: Color,
-    /** Input field border */
-    val inputBorder: Color,
+    public val error: Color,
+    public val errorVariant: Color,
+    public val onError: Color,
 
-    /** Whether this is a light color scheme */
-    val isLight: Boolean,
+    public val success: Color,
+    public val successVariant: Color,
+    public val onSuccess: Color,
+
+    public val warning: Color,
+    public val warningVariant: Color,
+    public val onWarning: Color,
+
+    public val info: Color,
+    public val infoVariant: Color,
+    public val onInfo: Color,
+
+    public val scrim: Color,
+    public val shadow: Color,
 )

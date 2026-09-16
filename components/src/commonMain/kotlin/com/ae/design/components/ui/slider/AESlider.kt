@@ -59,8 +59,8 @@ public fun AESlider(
         label = "sliderFraction",
     )
 
-    val trackColor = if (enabled) colors.accent else colors.textMuted
-    val trackBg = colors.border
+    val trackColor = if (enabled) colors.primary else colors.disable
+    val trackBg = colors.containerVariant
 
     Box(
         modifier = modifier

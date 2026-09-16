@@ -8,25 +8,45 @@ import aedesign.foundation.generated.resources.barlow_bold
 import aedesign.foundation.generated.resources.barlow_medium
 import aedesign.foundation.generated.resources.barlow_regular
 import aedesign.foundation.generated.resources.barlow_semibold
+import aedesign.foundation.generated.resources.cairo_bold
+import aedesign.foundation.generated.resources.cairo_light
+import aedesign.foundation.generated.resources.cairo_medium
+import aedesign.foundation.generated.resources.cairo_regular
+import aedesign.foundation.generated.resources.cairo_semibold
 import org.jetbrains.compose.resources.Font
 
 /**
- * Font family holder for AEDesign.
+ * Font family factories for AEDesign.
  *
- * Barlow TTF files (400/500/600/700) loaded from compose resources.
+ * - [barlow] — LTR / English (default)
+ * - [cairo] — RTL / Arabic
  */
 public object AEFontFamily {
 
     /**
      * Returns the **Barlow** font family loaded from compose resources.
      *
-     * Weights: Normal (400) · Medium (500) · SemiBold (600) · Bold (700)
+     * Suitable for LTR / English layouts. Weights: Normal · Medium · SemiBold · Bold
      */
     @Composable
     public fun barlow(): FontFamily = FontFamily(
-        Font(resource = Res.font.barlow_regular, weight = FontWeight.Normal),
-        Font(resource = Res.font.barlow_medium, weight = FontWeight.Medium),
+        Font(resource = Res.font.barlow_regular,  weight = FontWeight.Normal),
+        Font(resource = Res.font.barlow_medium,   weight = FontWeight.Medium),
         Font(resource = Res.font.barlow_semibold, weight = FontWeight.SemiBold),
-        Font(resource = Res.font.barlow_bold, weight = FontWeight.Bold),
+        Font(resource = Res.font.barlow_bold,     weight = FontWeight.Bold),
+    )
+
+    /**
+     * Returns the **Cairo** font family loaded from compose resources.
+     *
+     * Suitable for RTL / Arabic layouts. Weights: Light · Normal · Medium · SemiBold · Bold
+     */
+    @Composable
+    public fun cairo(): FontFamily = FontFamily(
+        Font(resource = Res.font.cairo_light,    weight = FontWeight.Light),
+        Font(resource = Res.font.cairo_regular,  weight = FontWeight.Normal),
+        Font(resource = Res.font.cairo_medium,   weight = FontWeight.Medium),
+        Font(resource = Res.font.cairo_semibold, weight = FontWeight.SemiBold),
+        Font(resource = Res.font.cairo_bold,     weight = FontWeight.Bold),
     )
 }

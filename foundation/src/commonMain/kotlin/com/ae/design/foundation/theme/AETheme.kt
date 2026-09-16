@@ -4,118 +4,73 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
-import com.ae.design.foundation.color.AEAccent
 import com.ae.design.foundation.color.AEColors
-import com.ae.design.foundation.color.AEPalette
+import com.ae.design.foundation.color.defaultDarkColors
+import com.ae.design.foundation.color.defaultLightColors
 import com.ae.design.foundation.icons.AEIconPack
 import com.ae.design.foundation.tokens.AEElevation
 import com.ae.design.foundation.tokens.AEMotion
 import com.ae.design.foundation.tokens.AERadius
+import com.ae.design.foundation.tokens.AEShadow
 import com.ae.design.foundation.tokens.AESpacing
-import com.ae.design.foundation.tokens.AEStylePreset
 import com.ae.design.foundation.typography.AEFontFamily
 import com.ae.design.foundation.typography.AETypography
 
-/**
- * AEDesign theme entry point.
- *
- * Wraps your composable tree to provide all design tokens via
- * [CompositionLocal]. Components inside this scope access tokens
- * through [AETheme.colors], [AETheme.typography], etc.
- *
- * ## Quick Start
- * ```
- * AETheme {
- *     AEButton(onClick = {}) { AEText("Hello") }
- * }
- * ```
- *
- * ## Custom Brand
- * ```
- * AETheme(
- *     palette = AEPalette.Slate,
- *     accent = AEAccent.Violet,
- *     preset = AEStylePreset.Soft,
- *     darkTheme = true,
- * ) { ... }
- * ```
- *
- * ## Full Override
- * ```
- * AETheme(
- *     colors = myBrandColors,
- *     typography = AETypography.default(myBrandFont),
- * ) { ... }
- * ```
- */
 @Composable
 public fun AETheme(
-    palette: AEPalette = AEPalette.Zinc,
-    accent: AEAccent = AEAccent.Blue,
-    preset: AEStylePreset = AEStylePreset.Default,
     darkTheme: Boolean = isSystemInDarkTheme(),
-    iconPack: AEIconPack = AEIconPack.Default,
-    colors: AEColors = palette.toColors(accent, darkTheme),
+    colorScheme: AEColors = if (darkTheme) defaultDarkColors else defaultLightColors,
     typography: AETypography = AETypography.default(AEFontFamily.barlow()),
-    spacing: AESpacing = preset.toSpacing(),
-    radius: AERadius = preset.toRadius(),
+    spacing: AESpacing = AESpacing(),
+    radius: AERadius = AERadius(),
     elevation: AEElevation = AEElevation(),
-    motion: AEMotion = preset.toMotion(),
+    shadow: AEShadow = AEShadow.default(),
+    motion: AEMotion = AEMotion(),
+    iconPack: AEIconPack = AEIconPack.Default,
     content: @Composable () -> Unit,
 ) {
     CompositionLocalProvider(
-        LocalAEColors provides colors,
+        LocalAEColors provides colorScheme,
         LocalAETypography provides typography,
         LocalAESpacing provides spacing,
         LocalAERadius provides radius,
         LocalAEElevation provides elevation,
+        LocalAEShadow provides shadow,
         LocalAEMotion provides motion,
         LocalAEIconPack provides iconPack,
         content = content,
     )
 }
 
-/**
- * Accessor object for current theme tokens.
- *
- * Must be called from within an [AETheme] scope.
- * ```
- * val bg = AETheme.colors.background
- * val title = AETheme.typography.headingLarge
- * ```
- */
 public object AETheme {
-    /** Current semantic color tokens. */
     public val colors: AEColors
         @Composable @ReadOnlyComposable
         get() = LocalAEColors.current
 
-    /** Current typography scale. */
     public val typography: AETypography
         @Composable @ReadOnlyComposable
         get() = LocalAETypography.current
 
-    /** Current spacing scale. */
     public val spacing: AESpacing
         @Composable @ReadOnlyComposable
         get() = LocalAESpacing.current
 
-    /** Current corner radius scale. */
     public val radius: AERadius
         @Composable @ReadOnlyComposable
         get() = LocalAERadius.current
 
-    /** Current elevation scale. */
     public val elevation: AEElevation
         @Composable @ReadOnlyComposable
         get() = LocalAEElevation.current
 
-    /** Current motion/animation tokens. */
+    public val shadow: AEShadow
+        @Composable @ReadOnlyComposable
+        get() = LocalAEShadow.current
+
     public val motion: AEMotion
         @Composable @ReadOnlyComposable
         get() = LocalAEMotion.current
 
-    /** Current icon pack. */
     public val icons: AEIconPack
         @Composable @ReadOnlyComposable
         get() = LocalAEIconPack.current

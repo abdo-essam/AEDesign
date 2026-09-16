@@ -32,8 +32,8 @@ import com.ae.design.foundation.theme.AETheme
 public fun AELinearProgress(
     progress: Float? = null,
     modifier: Modifier = Modifier,
-    color: Color = AETheme.colors.accent,
-    trackColor: Color = AETheme.colors.border,
+    color: Color = AETheme.colors.primary,
+    trackColor: Color = AETheme.colors.containerVariant,
     height: Dp = 6.dp,
 ) {
     val radius = AETheme.radius
@@ -105,8 +105,8 @@ public fun AECircularProgress(
     modifier: Modifier = Modifier,
     size: Dp = 40.dp,
     strokeWidth: Dp = 4.dp,
-    color: Color = AETheme.colors.accent,
-    trackColor: Color = AETheme.colors.border,
+    color: Color = AETheme.colors.primary,
+    trackColor: Color = AETheme.colors.containerVariant,
 ) {
     val infiniteTransition = rememberInfiniteTransition(label = "circularProgress")
     val rotation by infiniteTransition.animateFloat(

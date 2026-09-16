@@ -16,13 +16,13 @@ import com.ae.design.foundation.theme.AETheme
  * Horizontal divider line using theme border color.
  *
  * @param modifier Modifier for the divider.
- * @param color Divider color. Defaults to [AETheme.colors.border].
+ * @param color Divider color. Defaults to [AETheme.colors.shadeQuaternary].
  * @param thickness Line thickness.
  */
 @Composable
 public fun AEDivider(
     modifier: Modifier = Modifier,
-    color: Color = AETheme.colors.border,
+    color: Color = AETheme.colors.shadeQuaternary,
     thickness: Dp = 1.dp,
 ) {
     Box(
@@ -37,13 +37,13 @@ public fun AEDivider(
  * Vertical divider line using theme border color.
  *
  * @param modifier Modifier for the divider.
- * @param color Divider color. Defaults to [AETheme.colors.border].
+ * @param color Divider color. Defaults to [AETheme.colors.shadeQuaternary].
  * @param thickness Line thickness.
  */
 @Composable
 public fun AEVerticalDivider(
     modifier: Modifier = Modifier,
-    color: Color = AETheme.colors.border,
+    color: Color = AETheme.colors.shadeQuaternary,
     thickness: Dp = 1.dp,
 ) {
     Box(

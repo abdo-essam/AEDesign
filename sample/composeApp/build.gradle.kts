@@ -27,7 +27,7 @@ val generateApiReference by tasks.registering(GenerateApiReferenceTask::class) {
     )
     registrySourceFile.set(
         layout.projectDirectory.file(
-            "src/commonMain/kotlin/com/ae/design/sample/docs/catalog/ComponentRegistry.kt",
+            "_legacy_sample/docs/catalog/ComponentRegistry.kt",
         ),
     )
     outputFile.set(
@@ -47,7 +47,7 @@ val generateRegistryJson by tasks.registering(GenerateRegistryJsonTask::class) {
     )
     registrySourceFile.set(
         layout.projectDirectory.file(
-            "src/commonMain/kotlin/com/ae/design/sample/docs/catalog/ComponentRegistry.kt",
+            "_legacy_sample/docs/catalog/ComponentRegistry.kt",
         ),
     )
     outputDir.set(

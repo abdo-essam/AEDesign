@@ -24,7 +24,7 @@ import com.ae.design.foundation.theme.AETheme
  * ```
  *
  * @param modifier Modifier for the surface root.
- * @param color Background color. Defaults to [AETheme.colors.surface].
+ * @param color Background color. Defaults to [AETheme.colors.container].
  * @param shape Corner shape. Defaults to [AETheme.radius.md] rounded corners.
  * @param elevation Shadow elevation. Defaults to no elevation.
  * @param content Composable content slot.
@@ -32,7 +32,7 @@ import com.ae.design.foundation.theme.AETheme
 @Composable
 public fun AESurface(
     modifier: Modifier = Modifier,
-    color: Color = AETheme.colors.surface,
+    color: Color = AETheme.colors.container,
     shape: Shape = RoundedCornerShape(AETheme.radius.md),
     elevation: Dp = AETheme.elevation.none,
     content: @Composable BoxScope.() -> Unit,

@@ -23,7 +23,7 @@ import com.ae.design.foundation.theme.AETheme
  * @param token The semantic icon token to render.
  * @param modifier Modifier for the icon container.
  * @param contentDescription Accessibility description. Pass `null` for decorative icons.
- * @param tint Color tint applied to the icon. Defaults to [AETheme.colors.textPrimary].
+ * @param tint Color tint applied to the icon. Defaults to [AETheme.colors.shadePrimary].
  * @param size Icon size in dp. Defaults to 24dp.
  */
 @Composable
@@ -31,7 +31,7 @@ public fun AEIcon(
     token: AEIconToken,
     modifier: Modifier = Modifier,
     contentDescription: String? = null,
-    tint: Color = AETheme.colors.textPrimary,
+    tint: Color = AETheme.colors.shadePrimary,
     size: Dp = 24.dp,
 ) {
     val iconPack = AETheme.icons
