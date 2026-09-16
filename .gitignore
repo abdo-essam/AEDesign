@@ -80,3 +80,7 @@ buildSrc/.gradle/
 
 # Bookmarks / Internal tools
 notes/
+
+# Agent & Migration tracking
+.agents/
+MIGRATION_PLAN.md
